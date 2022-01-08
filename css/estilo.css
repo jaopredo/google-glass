@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "Computer Font";
+    src: url("../fonts/computer-font.ttf");
+}
+@font-face {
+    font-family: "Bubble Gum";
+    src: url("../fonts/bubblegum-sans-regular.otf");
+}
+@font-face {
+    font-family: "Titillium Web";
+    src: url("../fonts/TitilliumWeb-ExtraLight.ttf");
+}
+
+/* RESETANDO */
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #cecece;
+}
+
+
+/* CONFIGURANDO O BÁSICO */
+#interface {
+    width: 1000px;
+    margin: 0 auto 0;
+    background-color: white;
+    text-align: justify;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 20% auto 5%;
+    grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer";
+}
+
+
+/* MENU DE NAVEGAÇÃO */
+menu{
+    list-style: none;
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: 13%;
+    font-size: 13pt;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.menu-option {
+    display: inline-block;
+
+    padding: 5px;
+    background-color: #bebebe;
+    cursor: pointer;
+}
+
+.menu-option:hover {
+    background-color: #9c9c9c;
+}
+
+.menu-option:active {
+    background-color: #5e5e5e;
+}
+
+
+/* CABEÇALHO */
+header#cabecalho {
+    border-bottom: 1px black solid;
+    grid-area: header;
+    /* background: red; */
+
+    background-image: url("../images/glass-logo-peq.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 77%;
+}
+
+#glass-logo-med {
+    width: 23%;
+    display: block;
+    float: right;
+}
+
+/* CORPO */
+main#corpo {
+    grid-area: main;
+    border-right: 1px black solid;
+    /* background: blue; */
+}
+
+/* TÍTULOS */
+h1 {
+    font-family: "Bubble Gum";
+    color: #727272;
+    margin: 10px auto 0px auto;
+}
+
+h2 {
+    font-family: 'Titillium Web', sans-serif;
+    color: #a0a0a0;
+    font-weight: lighter;
+}
+
+main h2 {
+    font-family: "Bubble Gum";
+    color: #727272;
+}
+
+#update {
+    text-align: right;
+    color: black;
+}
+
+h3 {
+    background-color: #d8d8d8;
+    color: #6d6d6d;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+h4 {
+    color: #bebebe;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 9pt;
+    margin-bottom: 10px;
+    margin-top: 3px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 50px;
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+/* MAN WOMAN IMAGE */
+.man-woman-photo {
+    box-shadow: black 3px 3px 3px;
+    border: 6px #ffffff solid;
+    position: relative;
+    width: 70%;
+}
+
+.man-woman-photo img {
+    width: 100%;
+}
+
+.man-woman-photo figcaption {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.452);
+    transition: opacity 1s;
+}
+
+.man-woman-photo figcaption:hover {
+    opacity: 1;
+}
+
+.man-woman-photo figcaption h1 {
+    color: white;
+    padding: 5px;
+}
+
+/* TABELAS */
+table#glass-specs {
+    font-family: Arial, Helvetica, sans-serif;
+    border-spacing: 0;
+    margin: auto;
+}
+
+table#glass-specs td {
+    border: 3px rgb(114, 114, 114) solid;
+    background-color: rgb(114, 114, 114);
+    color: white;
+    font-size: 15pt;
+    padding: 10px;
+}
+
+td.right {
+    font-weight: bolder;
+}
+
+.item {
+    color: black;
+    background-color: rgb(177, 177, 177);
+}
+
+
+/* LATERAL */
+aside#lateral {
+    grid-area: aside;
+    /* background: yellow; */
+}
+
+
+/* RODA-PÉ */
+footer#rodape {
+    grid-area: footer;
+    /* background: green; */
+}
