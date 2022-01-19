@@ -1,0 +1,26 @@
+/* CONFIGURANDO O BÁSICO */
+#interface {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    text-align: justify;
+
+    padding-right: 10px;
+    padding-left: 10px;
+
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 25% auto 5%;
+    grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+}
+
+main#corpo {
+    grid-area: main;
+    border-right: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* background: blue; */
+}

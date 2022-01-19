@@ -21,21 +21,25 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     background-color: #cecece;
+    display: block;
 }
 
 
 /* CONFIGURANDO O BÁSICO */
 #interface {
-    width: 1000px;
-    margin: 0 auto 0;
+    width: 80%;
+    margin: auto;
     background-color: white;
     text-align: justify;
-    padding: 10px;
+
+    padding-right: 10px;
+    padding-left: 10px;
 
     display: grid;
-    grid-template-columns: 65% 35%;
-    grid-template-rows: 20% auto 5%;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 25% auto 5%;
     grid-template-areas: 
         "header header"
         "main aside"
@@ -50,15 +54,16 @@ menu{
     position: fixed;
     top: 0px;
     right: 13%;
-    font-size: 13pt;
+    font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+    z-index: 2;
 }
 
 .menu-option {
     display: inline-block;
 
-    padding: 5px;
+    padding: 9px;
     background-color: #bebebe;
     cursor: pointer;
 }
@@ -69,6 +74,16 @@ menu{
 
 .menu-option:active {
     background-color: #5e5e5e;
+    color: white;
+}
+
+menu a {
+    color: black;
+    text-decoration: none;
+}
+
+menu a:visited {
+    color: black;
 }
 
 
@@ -80,57 +95,76 @@ header#cabecalho {
 
     background-image: url("../images/glass-logo-peq.jpg");
     background-repeat: no-repeat;
-    background-position: 0 77%;
+    background-position: 0 90%;
 }
 
-#glass-logo-med {
-    width: 23%;
+.default-icon {
     display: block;
-    float: right;
+    right: 9%;
+    top: 10%;
+    position: absolute;
 }
+
 
 /* CORPO */
 main#corpo {
     grid-area: main;
     border-right: 1px black solid;
+    padding-left: 10px;
+    padding-right: 10px;
     /* background: blue; */
 }
+
+section {
+    width: 100%;
+}
+
 
 /* TÍTULOS */
 h1 {
     font-family: "Bubble Gum";
     color: #727272;
-    margin: 10px auto 0px auto;
+    font-size: 30pt;
+    margin-top: 10px;
 }
 
 h2 {
     font-family: 'Titillium Web', sans-serif;
     color: #a0a0a0;
+    font-size: 20pt;
     font-weight: lighter;
+    margin-bottom: 10%;
 }
 
 main h2 {
     font-family: "Bubble Gum";
     color: #727272;
+    font-size: 20pt;
+    margin-bottom: 0px;
 }
 
 #update {
     text-align: right;
+    margin-right: 10px;
+    font-size: 9pt;
     color: black;
+    color: rgb(114, 114, 114);
 }
 
 h3 {
     background-color: #d8d8d8;
     color: #6d6d6d;
+    font-size: 14pt;
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
     margin-top: 10px;
+    font-weight: bolder;
 }
 
 h4 {
     color: #bebebe;
     font-family: "Titillium Web", sans-serif;
-    font-size: 9pt;
+    font-size: 12pt;
     margin-bottom: 10px;
     margin-top: 3px;
 }
@@ -138,6 +172,7 @@ h4 {
 p {
     font-family: Arial, Helvetica, sans-serif;
     text-indent: 50px;
+    font-size: 11.5pt;
     font-weight: normal;
     margin-top: 15px;
 }
@@ -175,40 +210,70 @@ p {
     padding: 5px;
 }
 
+
 /* TABELAS */
 table#glass-specs {
     font-family: Arial, Helvetica, sans-serif;
     border-spacing: 0;
     margin: auto;
+    border-collapse: collapse;
 }
 
 table#glass-specs td {
     border: 3px rgb(114, 114, 114) solid;
-    background-color: rgb(114, 114, 114);
-    color: white;
-    font-size: 15pt;
+    font-size: 12pt;
     padding: 10px;
 }
 
 td.right {
     font-weight: bolder;
+    text-align: right;
+    background-color: rgb(114, 114, 114);
+    color: white;
 }
 
-.item {
+td.item {
     color: black;
-    background-color: rgb(177, 177, 177);
+    background-color: #cecece;
+}
+
+
+/* MIDIA */
+video {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 
 /* LATERAL */
 aside#lateral {
     grid-area: aside;
+    width: 100%;
     /* background: yellow; */
 }
 
+aside#lateral section {
+    background-color: #dadada;
+    padding: 10px;
+    width: 95%;
+    margin: 10px auto;
+}
+
+aside#lateral section h2 {
+    font-family: "Bubble Gum";
+    color: #6d6d6d;
+}
+
+aside#lateral section h3 {
+    color: #ffffff;
+    background-color: #5e5e5e;
+}
 
 /* RODA-PÉ */
 footer#rodape {
     grid-area: footer;
+    text-align: center;
+    border-top: 1px black solid;
     /* background: green; */
 }

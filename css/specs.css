@@ -1,0 +1,11 @@
+section {
+    width: 100%;
+}
+
+
+/* IFRAME */
+iframe {
+    height: 300px;
+    width: 45%;
+    overflow: hidden;
+}
