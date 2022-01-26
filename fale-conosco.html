@@ -1,47 +1,114 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Glass</title>
 
-[AQUI ENTRA UMA FOTO]
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/no-index.css">
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+    <script src="javascript/funcoes.js" defer></script>
+</head>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+            <!-- <img src="images/glass-logo-peq.jpg" alt="Texto logo"> -->
+            <img class="default-icon" id="menu-icon" src="images/glass-oculos-preto-med.png" alt="Logo do GLASS">
+            <nav id="nav-bar">
+                <menu id="menu">
+                    <li onmouseout="troca_imagem('images/glass-oculos-preto-med.png')" onmouseover="troca_imagem('images/home.png');" class="menu-option"><a href="index.html">Home</a></li>
+                    <li onmouseout="troca_imagem('images/glass-oculos-preto-med.png')" onmouseover="troca_imagem('images/especificacoes.png');" class="menu-option"><a href="specs.html">Especificações</a></li>
+                    <li onmouseout="troca_imagem('images/glass-oculos-preto-med.png')" onmouseover="troca_imagem('images/fotos.png');" class="menu-option"><a href="fotos.html">Fotos</a></li>
+                    <li onmouseout="troca_imagem('images/glass-oculos-preto-med.png')" onmouseover="troca_imagem('images/multimidia.png');" class="menu-option"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmouseout="troca_imagem('images/glass-oculos-preto-med.png')" onmouseover="troca_imagem('images/contato.png');" class="menu-option"><a href="fale-conosco.html">Fale conosco</a></li>
+                </menu>
+            </nav>
+        </header>
+        <main id="corpo">
+            <h4>Fale Conosco &gt; Contato</h4>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+            <h2>Formulário de Contato</h2>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+            <div>
+                <h4>por Gustavo Guanabara</h4>
+                <h4 id="update">Atualizado em 19/Janeiro/2022</h4>
+            </div>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+            <form action="thank-page.html" method="POST">
+                <fieldset>
+                    <legend>Identificação do Usuário</legend>
+                        <label for="iName">Nome:</label><input id="iName" name="tName" type="text">
+                        <label for="iSenha">Senha:</label><input id="iSenha" name="tSenha" type="password">
+                        <label for="iEmail">E-mail:</label><input id="iEmail" name="tEmail" type="email">
+                        <fieldset>
+                            <legend>Sexo:</legend>
+                            <input value="man" type="radio" name="tGender" id="man">Masculino
+                            <input value="woman" type="radio" name="tGender"id="woman">Feminino
+                        </fieldset>
+                        <label for="iNasc">Data de Nascimento:</label><input id="iNasc" name="tNasc" type="date">
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço do Usuário</legend>
+                        <label for="iEnd">Logradouro:</label><input type="text" id="iEnd" name="tEnd">
+                        <label for="iNum">Número:</label><input type="number" id="iNum" name="tNum" placeholder="(00) 90000-0000">
+                        <label for="iEst">Estado:</label>
+                        <select name="tEst" id="iEst">
+                            <optgroup label="Norte">
+                                <option value="AC">Acre</option>
+                                <option value="AM">Amazônia</option>
+                                <option value="PA">Pará</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="AP">Amapá</option>
+                                <option value="TO">Tocantins</option>
+                            </optgroup>
+                            <optgroup label="Nordeste">
+                                <option value="CE">Ceará</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="PI">Piauí</option>
+                                <option value="BA">Bahia</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                            </optgroup>
+                            <optgroup label="Centro-Oeste">
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+                            </optgroup>
+                            <optgroup label="Sudeste">
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+                            </optgroup>
+                            <optgroup label="Sul">
 
-
-[BOTÃO ENVIAR]
-
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+                            </optgroup>
+                        </select>
+                        Cidade:
+                </fieldset>
+                <fieldset>
+                    <legend>Mensagem do Usuário</legend>
+                        Grau de Urgência:
+                        Mensagem:
+                </fieldset>
+                <fieldset>
+                    <legend>Quero um Google Glass</legend>
+                        Gostaria de adquirir um Google Glass quando disponível
+                        Cor:
+                        Quantidade:
+                        Preço Total: R$
+                </fieldset>
+                <button type="submit">ENVIAR</button>
+            </form>
+        </main>
+        <footer id="rodape">
+            <p>Copyright&copy; 2013 - by Gustavo Guanabara</p>
+            <p>Facebook | Twitter</p>
+        </footer>
+    </div>
+</body>
+</html>
